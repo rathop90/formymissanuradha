@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #fff0f3;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #fff;
+            padding: 20px 50px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .navbar a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #ff6f91;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #ff4d6d;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(to right, #ff9a8b, #ff6f91);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            animation: fadeIn 2s ease-in;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            font-style: italic;
+        }
+
+        .section {
+            padding: 100px 50px;
+            min-height: 80vh;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-in-out;
+        }
+        .section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .feelings { background: #fff; }
+        .memories { background: #fff0f3; }
+        .you { background: #fff; }
+        .thoughts { background: #fff0f3; }
+        .final { background: #fff; }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .gallery-grid img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        .quality-box {
+            margin: 20px 0;
+            padding: 20px;
+            background: #ffe6ea;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .quality-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .btn {
+            padding: 12px 25px;
+            background: #ff6f91;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #ff4d6d;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#hero">Start</a>
+        <a href="#feelings">My Heart</a>
+        <a href="#memories">Memories</a>
+        <a href="#you">You</a>
+        <a href="#thoughts">Thoughts</a>
+        <a href="#final">Final Words</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div>
+            <h1>Hey, You Mean the World to Me</h1>
+            <p>This is for you—every word, every feeling.</p>
+        </div>
+    </section>
+
+    <!-- Feelings Section -->
+    <section id="feelings" class="section feelings">
+        <h2>How I Feel</h2>
+        <p>Har roz subah jab aankh khulti hai, pehla khayal tera hi hota hai. Teri smile meri wajah ban jati hai har din ko behtar banane ki. Yeh dil bolta hai ki tu meri zindagi ka woh hissa hai jo main kabhi nahi khona chahta.</p>
+    </section>
+
+    <!-- Memories Section -->
+    <section id="memories" class="section memories">
+        <h2>Our Moments</h2>
+        <p>Yaad hai jab hum pehli baar mile the? Teri woh chhoti si baat bhi dil mein ghar kar gayi thi.</p>
+        <div class="gallery-grid">
+            <img src="https://via.placeholder.com/300x200" alt="Memory 1">
+            <img src="https://via.placeholder.com/300x200" alt="Memory 2">
+            <img src="https://via.placeholder.com/300x200" alt="Memory 3">
+            <img src="https://via.placeholder.com/300x200" alt="Memory 4">
+        </div>
+    </section>
+
+    <!-- You Section -->
+    <section id="you" class="section you">
+        <h2>What I Love About You</h2>
+        <div class="quality-box">
+            <h3>Teri Hasi</h3>
+            <p>Jab tu hasti hai, duniya ruk si jati hai.</p>
+        </div>
+        <div class="quality-box">
+            <h3>Tera Nature</h3>
+            <p>Itna pyaara aur caring, koi aur ho hi nahi sakta.</p>
+        </div>
+        <div class="quality-box">
+            <h3>Teri Baatein</h3>
+            <p>Har baat dil ko chhoo jati hai.</p>
+        </div>
+    </section>
+
+    <!-- Thoughts Section -->
+    <section id="thoughts" class="section thoughts">
+        <h2>Mere Dil Ki Baat</h2>
+        <p>“Tu meri wajah hai har khushi ki.”</p>
+        <p>“Tere bina yeh dil adhura sa lagta hai.”</p>
+        <p>“Har pal bas tera saath chahiye.”</p>
+    </section>
+
+    <!-- Final Confession -->
+    <section id="final" class="section final">
+        <h2>The Truth</h2>
+        <p>Main tujhse dil se dil tak pyaar karta hoon. Yeh website meri feelings ka chhota sa hissa hai—baaki toh aankhon mein dikhega jab tu samne hogi. Kya tu meri wajah banegi har din ko khubsurat banane ki?</p>
+        <button class="btn">I Hope You Feel the Same</button>
+    </section>
+
+    <script>
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.3 });
+
+        sections.forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>
